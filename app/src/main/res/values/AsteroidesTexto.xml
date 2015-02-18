@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+
+<resources>
+    <style name="TextoAsteroides">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#fff32e54</item>
+        <item name="android:shadowColor">#bb1a060b</item>
+        <item name="android:shadowRadius">1.5</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+</resources>

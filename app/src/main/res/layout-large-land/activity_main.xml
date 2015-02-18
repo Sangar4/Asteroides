@@ -12,11 +12,9 @@
     android:weightSum="1">
 
     <TextView android:text="@string/app_name"
-        android:textColor="#ffffff"
+        style="@style/TextoAsteroides"
         android:textSize="35sp"
         android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="100dp" />
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
