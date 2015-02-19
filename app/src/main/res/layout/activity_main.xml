@@ -53,7 +53,8 @@
         android:textAllCaps="false"
         android:textSize="20sp"
         android:text="@string/salir"
-        android:id="@+id/button4" />
+        android:id="@+id/button4"
+        android:onClick="salir"/>
 
 
 </LinearLayout>
