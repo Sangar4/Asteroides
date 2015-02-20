@@ -34,7 +34,8 @@
         android:textAllCaps="false"
         android:textSize="20sp"
         android:text="@string/configurar"
-        android:id="@+id/button"/>
+        android:id="@+id/button"
+        android:onClick="lanzarPreferencias"/>
 
     <Button
         android:layout_width="fill_parent"

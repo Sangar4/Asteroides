@@ -43,14 +43,14 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.acercaDe) {
             lanzarAcercaDe(null);
             return true;
         }
-
+       if(id == R.id.preferencias){
+        lanzarPreferencias(null);
+        return true;
+    }
         return super.onOptionsItemSelected(item);
     }
 
@@ -60,6 +60,10 @@ public class MainActivity extends ActionBarActivity {
 
     public void lanzarAcercaDe(View view){
         Intent i = new Intent(this, AcercaDe.class);
+        startActivity(i);
+    }
+    public void lanzarPreferencias(View view){
+        Intent i = new Intent(this, Preferencias.class);
         startActivity(i);
     }
 

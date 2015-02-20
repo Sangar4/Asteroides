@@ -23,6 +23,11 @@
             android:name=".AcercaDe"
             android:label="Acerca de ...">
     </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:name=".Preferencias"
+            android:label="Preferencias">
+        </activity>
     </application>
 
 </manifest>
