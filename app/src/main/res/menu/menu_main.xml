@@ -5,8 +5,9 @@
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_preferences"
         app:showAsAction="never" />
     <item android:id="@+id/acercaDe"
         android:title="@string/acercade"
-        android:icon="@drawable/ic_launcher"  />
+        android:icon="@android:drawable/ic_menu_info_details"  />
 </menu>
