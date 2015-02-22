@@ -33,6 +33,12 @@
             android:name=".Puntuaciones"
             android:label="Puntuaciones">
         </activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".Juego"
+            android:label="Juego"
+            android:screenOrientation="landscape">
+        </activity>
     </application>
 
 </manifest>
