@@ -22,11 +22,16 @@
             android:theme="@style/Theme.AppCompat.Dialog"
             android:name=".AcercaDe"
             android:label="Acerca de ...">
-    </activity>
+        </activity>
         <activity
-            android:theme="@style/Theme.AppCompat.Dialog"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             android:name=".Preferencias"
             android:label="Preferencias">
+        </activity>
+        <activity
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:name=".Puntuaciones"
+            android:label="Puntuaciones">
         </activity>
     </application>
 

@@ -25,7 +25,8 @@
         android:layout_marginTop="20dp"
         android:text="@string/jugar"
         android:id="@+id/button2"
-        android:layout_weight="0.05" />
+        android:layout_weight="0.05"
+        android:onClick="mostrarPreferencias"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -56,6 +57,14 @@
         android:text="@string/salir"
         android:id="@+id/button4"
         android:onClick="salir"/>
-
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:text="@string/puntuaciones"
+        android:id="@+id/button5"
+        android:onClick="lanzarPuntuaciones"/>
 
 </LinearLayout>

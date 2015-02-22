@@ -1,18 +1,23 @@
 package com.examples.lvasanga.asteroides;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.Vector;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private Button bAcercaDe;
-
+    public static AlmacenPuntuaciones almacen = new AlmacenPuntuacionesArray();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,5 +71,33 @@ public class MainActivity extends ActionBarActivity {
         Intent i = new Intent(this, Preferencias.class);
         startActivity(i);
     }
+    public void mostrarPreferencias(View view){
+        SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        String s = "música: "+ pref.getBoolean("musica",true)
+                +", gráficos: " + pref.getString("graficos","?");
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+    public static class AlmacenPuntuacionesArray implements AlmacenPuntuaciones{
+        private Vector<String> puntuaciones;
+        public AlmacenPuntuacionesArray() {
+            puntuaciones= new Vector<String>();
+            puntuaciones.add("123000 Pepito Domingez");
+            puntuaciones.add("111000 Pedro Martinez");
+            puntuaciones.add("011000 Paco Pérez");
+        }
+        @Override public void guardarPuntuacion(int puntos, String nombre, long fecha) {
+            puntuaciones.add(0, puntos + " "+ nombre);
+        }
+        @Override public Vector<String> listaPuntuaciones(int cantidad) {
+            return  puntuaciones;
+        }
+    }
+
+    public void lanzarPuntuaciones(View view) {
+        Intent i = new Intent(this, Puntuaciones.class);
+        startActivity(i);
+    }
+
 
 }
